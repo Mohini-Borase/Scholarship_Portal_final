@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scholarship Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LANDING -->
+<div id="landing">
+<h1>🎓 Scholarship Portal</h1>
+<p>Find scholarships & avoid scams</p>
+<button onclick="openAuth()">Login / Register</button>
+</div>
+
+<!-- LOGIN -->
+<div id="authBox">
+<div class="authCard">
+<h2>Login / Register</h2>
+<input id="user" placeholder="Username">
+<input id="pass" type="password" placeholder="Password">
+<br>
+<button onclick="register()">Register</button>
+<button onclick="login()">Login</button>
+<p id="authMsg"></p>
+</div>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+<div class="sidebar">
+<h2> Portal</h2>
+
+<button onclick="show('home')"> Home</button>
+<button onclick="show('profile')"> Profile</button>
+<button onclick="show('finder')"> Finder</button>
+<button onclick="show('schemes')"> Schemes</button>
+<button onclick="show('guide')"> Guide</button>
+<button onclick="show('chat')"> Chat</button>
+<button onclick="show('scam')"> Scam</button>
+<button onclick="show('report')"> Report</button>
+<button onclick="show('help')"> Help</button>
+<button onclick="show('contact')"> Contact</button>
+
+<hr>
+<button onclick="logout()" style="background:#ff4d6d;">Logout</button>
+</div>
+
+<div class="main">
+
+<div id="home" class="section active">
+<h2 style="text-align:center;">Welcome</h2>
+
+<div class="card">
+<p>✔ Find verified scholarships easily</p>
+<p>✔ Avoid fake and scam links</p>
+<p>✔ Get step-by-step guidance to apply</p>
+<p>✔ Use finder to search scholarships quickly</p>
+<p>✔ Save your profile for better recommendations</p>
+</div>
+
+<div class="card">
+<h3>How to use this portal?</h3>
+<p>1. Complete your profile</p>
+<p>2. Go to Finder or Schemes</p>
+<p>3. Click Apply on scholarships</p>
+<p>4. Use Guide section for help</p>
+</div>
+</div>
+
+<div id="profile" class="section">
+<h2>👤 Profile</h2>
+
+<input id="pname" placeholder="Full Name">
+<input id="age" placeholder="Age">
+<input id="marks" placeholder="Marks">
+<input id="income" placeholder="Family Income">
+
+<select id="category">
+<option>Category</option>
+<option>General</option>
+<option>OBC</option>
+<option>SC</option>
+<option>ST</option>
+</select>
+
+<select id="gender">
+<option>Gender</option>
+<option>Male</option>
+<option>Female</option>
+</select>
+
+<input id="course" placeholder="Course">
+
+<button onclick="saveProfile()">Save Profile</button>
+<p id="profileMsg"></p>
+</div>
+
+<div id="finder" class="section">
+<h2>Finder</h2>
+<p> Enter keywords like scholarship name, category, or field to search.</p>
+<input id="search">
+<button onclick="find()">Search</button>
+<div id="result"></div>
+</div>
+
+<div id="schemes" class="section">
+<h2 style="text-align:center;">Schemes</h2>
+<div id="allSchemes"></div>
+</div>
+
+<div id="guide" class="section">
+<h2>Guide</h2>
+<div id="guideList"></div>
+</div>
+
+<div id="chat" class="section">
+<p> Ask your doubts related to scholarships or application process.</p>
+<input id="chatInput">
+<button onclick="chat()">Send</button>
+<div id="chatBox"></div>
+</div>
+
+<div id="scam" class="section">
+<p> Enter a website link to check if it is safe (.gov is usually trusted).</p>
+<input id="scamInput">
+<button onclick="checkScam()">Check</button>
+<div id="scamResult"></div>
+</div>
+
+<div id="report" class="section">
+<h2>Report Issue</h2>
+<div class="reportBox">
+<textarea placeholder="Describe your issue in detail..."></textarea>
+<button onclick="alert('Reported Successfully ')">Submit</button>
+</div>
+</div>
+
+<div id="help" class="section">
+<h2 style="text-align:center;">Help</h2>
+
+<div class="card">
+<p>🔹 Use Finder to search scholarships</p>
+<p>🔹 Use Schemes to view all available scholarships</p>
+<p>🔹 Fill Profile to get better suggestions</p>
+<p>🔹 Check Scam section before applying</p>
+<p>🔹 Use Guide for step-by-step help</p>
+</div>
+
+<div class="card">
+<h3>Common Issues</h3>
+<p>❓ Not finding scholarship → Try different keywords</p>
+<p>❓ Link not opening → Check internet connection</p>
+<p>❓ Confused → Use Guide section</p>
+</div>
+</div>
+
+<div id="contact" class="section">
+<h2 style="text-align:center;">Contact</h2>
+
+<div class="card">
+<p> Email: help@portal.com</p>
+<p> Phone: +91 9876543210</p>
+<p> Address: Jalgaon, Maharashtra</p>
+</div>
+
+<div class="card">
+<h3>Support Hours</h3>
+<p>Monday – Saturday</p>
+<p>10:00 AM – 6:00 PM</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
